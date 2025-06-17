@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: e-ticket-go
+    env: docker
+    dockerfilePath: ./Dockerfile
+    plan: free
+    healthCheckPath: /
+    autoDeploy: true
+    envVars:
+      - key: PORT
+        value: 8080
+      - key: GIN_MODE
+        value: release 
